@@ -24,6 +24,7 @@ import Eye from "./assets/eye.png";
 import Exit from "./assets/exit.png";
 import Trash from "./assets/trash.png";
 import AddCart from "./assets/add_cart.png";
+import { FaBars } from "react-icons/fa6";
 
 function App() {
   const [books, setBooks] = useState([
@@ -241,7 +242,10 @@ function App() {
             <span className="relative z-10">Kitobchi</span>
             <span className="absolute inset-0 rounded-[25%] shadow-[inset_0_0_10px_lime] bg-black z-0"></span>
           </a>
-          <ul className="flex gap-2">
+          <div className="max-[650px]:block hidden text-[lime] text-4xl">
+            <FaBars />
+          </div>
+          <ul className="flex gap-2 max-[800px]:gap-0 max-[650px]:hidden">
             <li>
               <a
                 href="#"
@@ -276,26 +280,26 @@ function App() {
             </li>
           </ul>
         </nav>
-        <div className="mx-auto mt-5 relative">
+        <div className="mt-5 relative max-w-[1200px] mx-30 max-[1000px]:mx-10">
           <img
             src="https://picsum.photos/1200/300"
             alt="bg"
-            className=" rounded-tr-[100%] rounded-bl-[100%] shadow-[0_0_15px_2px_lime]"
-          />
-          <img
-            src="https://picsum.photos/400/101"
-            alt="bg"
-            className="absolute top-0 right-0 rounded-tr-[100%] rounded-bl-[100%] shadow-[0_0_15px_2px_lime]"
+            className="rounded-tr-[100%] rounded-bl-[100%] shadow-[0_0_15px_2px_lime] max-w-full max-[450px]:hidden"
           />
           <img
             src="https://picsum.photos/400/100"
             alt="bg"
-            className="absolute bottom-0 left-0 rounded-tr-[100%] rounded-bl-[100%] shadow-[0_0_15px_2px_lime]"
+            className="absolute top-0 right-0 rounded-tr-[100%] rounded-bl-[100%] shadow-[0_0_15px_2px_lime] max-[1270px]:max-w-[300px] max-[1050px]:max-w-[250px] max-[900px]:max-w-[200px] max-[800px]:max-w-[150px] max-[680px]:max-w-[130px] max-[650px]:hidden"
+          />
+          <img
+            src="https://picsum.photos/400/100"
+            alt="bg"
+            className="absolute bottom-0 left-0 rounded-tr-[100%] rounded-bl-[100%] shadow-[0_0_15px_2px_lime] max-[1270px]:max-w-[300px] max-[1050px]:max-w-[250px] max-[900px]:max-w-[200px] max-[800px]:max-w-[150px] max-[680px]:max-w-[130px] max-[650px]:hidden"
           />
         </div>
       </header>
       <main>
-        <ul className="grid grid-cols-5 mx-30 my-10 gap-5">
+        <ul className="grid grid-cols-5 max-[1400px]:grid-cols-4 max-[1000px]:grid-cols-3 max-[800px]:grid-cols-2 max-[600px]:grid-cols-1 mx-30 max-[1000px]:mx-10 my-10 gap-5 max-[350px]:mx-5">
           {books.map((book) => {
             return (
               <li
@@ -396,7 +400,7 @@ function App() {
           target="_blank"
           className="outline-none"
         >
-          <span className="text-lg text-[lime] hover:text-yellow-400 transition-all duration-100 ease-out hover:duration-200 hover:ease-in px-4 py-2 hover:shadow-[inset_0_0_10px_yellow] rounded-[25%] bg-transparent">
+          <span className="text-lg max-[500px]:text-center text-[lime] hover:text-yellow-400 transition-all duration-100 ease-out hover:duration-200 hover:ease-in px-4 py-2 hover:shadow-[inset_0_0_10px_yellow] rounded-[25%] bg-transparent">
             &copy; Powered by Abdujalil Nizomiddinov (Devixo coder)
           </span>
         </a>
@@ -406,6 +410,3 @@ function App() {
 }
 
 export default App;
-
-
-// lastest version 
