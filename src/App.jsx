@@ -20,7 +20,6 @@ import Image17 from "./assets/17.jpg";
 import Image18 from "./assets/18.jpg";
 import Image19 from "./assets/19.jpg";
 import Image20 from "./assets/20.jpg";
-import Bg from "./assets/bg.jpeg";
 import Eye from "./assets/eye.png";
 import Exit from "./assets/exit.png";
 import Trash from "./assets/trash.png";
@@ -277,8 +276,22 @@ function App() {
             </li>
           </ul>
         </nav>
-        <div className="mx-auto mt-5">
-          <img src="https://picsum.photos/1200/300" alt="bg" className=" rounded-tr-[100%] rounded-bl-[100%] shadow-[0_0_15px_2px_lime]" />
+        <div className="mx-auto mt-5 relative">
+          <img
+            src="https://picsum.photos/1200/300"
+            alt="bg"
+            className=" rounded-tr-[100%] rounded-bl-[100%] shadow-[0_0_15px_2px_lime]"
+          />
+          <img
+            src="https://picsum.photos/400/101"
+            alt="bg"
+            className="absolute top-0 right-0 rounded-tr-[100%] rounded-bl-[100%] shadow-[0_0_15px_2px_lime]"
+          />
+          <img
+            src="https://picsum.photos/400/100"
+            alt="bg"
+            className="absolute bottom-0 left-0 rounded-tr-[100%] rounded-bl-[100%] shadow-[0_0_15px_2px_lime]"
+          />
         </div>
       </header>
       <main>
@@ -350,10 +363,18 @@ function App() {
             className="bg-black p-5 rounded-xl max-w-md w-full relative text-[lime]  shadow-[0_0_30px_lime]"
             onClick={(e) => e.stopPropagation()}
           >
-            <h2 className="text-xl font-bold mb-2 max-w-90">{modalBook.title}</h2>
-            <p className="mb-1"><b>Author:</b> {modalBook.author}</p>
-            <p className="mb-1"><b>Year:</b> {modalBook.year}</p>
-            <p className="mb-1"><b>Description:</b> {modalBook.description}</p>
+            <h2 className="text-xl font-bold mb-2 max-w-90">
+              {modalBook.title}
+            </h2>
+            <p className="mb-1">
+              <b>Author:</b> {modalBook.author}
+            </p>
+            <p className="mb-1">
+              <b>Year:</b> {modalBook.year}
+            </p>
+            <p className="mb-1">
+              <b>Description:</b> {modalBook.description}
+            </p>
             <img
               src={modalBook.image}
               alt={modalBook.title}
@@ -385,3 +406,6 @@ function App() {
 }
 
 export default App;
+
+
+// lastest version 
